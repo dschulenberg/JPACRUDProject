@@ -1,0 +1,3 @@
+rootProject.name = 'TheRightTool'
+
+includeFlat 'JPARightTool'
