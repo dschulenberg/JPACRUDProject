@@ -150,6 +150,19 @@ public class MaintenanceHistory {
 	public MaintenanceHistory() {
 		super();
 	}
+
+	public MaintenanceHistory(String machineName, String employeeName, String description, String repair,
+			String component, Integer hoursWorked, Double repairCost, String machineUrl) {
+		super();
+		this.machineName = machineName;
+		this.employeeName = employeeName;
+		this.description = description;
+		this.repair = repair;
+		this.component = component;
+		this.hoursWorked = hoursWorked;
+		this.repairCost = repairCost;
+		this.machineUrl = machineUrl;
+	}
 	
 	
 }
