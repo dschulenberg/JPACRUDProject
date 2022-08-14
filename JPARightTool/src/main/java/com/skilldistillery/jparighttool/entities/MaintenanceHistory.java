@@ -163,6 +163,19 @@ public class MaintenanceHistory {
 		this.repairCost = repairCost;
 		this.machineUrl = machineUrl;
 	}
+
+	public MaintenanceHistory(String machineName, String employeeName) {
+		super();
+		this.machineName = machineName;
+		this.employeeName = employeeName;
+	}
+
+	public MaintenanceHistory(int id, String machineName, String employeeName) {
+		super();
+		this.id = id;
+		this.machineName = machineName;
+		this.employeeName = employeeName;
+	}
 	
 	
 }

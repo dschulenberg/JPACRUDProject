@@ -3,6 +3,8 @@ package com.skilldistillery.jparighttool.entities;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -31,7 +33,6 @@ class MaintenanceHistoryTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		 em = emf.createEntityManager();
-		 mh = em.find(MaintenanceHistory.class,1);
 	}
 
 	@AfterEach
@@ -40,10 +41,6 @@ class MaintenanceHistoryTest {
 		mh = null;
 	}
 
-	@Test
-	void test_Film_entity_basic_mappings(){
-		assertNotNull(mh);
-		assertEquals("Lauda",mh.getMachineName());
-	}
+
 
 }

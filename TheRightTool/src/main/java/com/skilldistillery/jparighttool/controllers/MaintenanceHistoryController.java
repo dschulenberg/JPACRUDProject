@@ -67,6 +67,7 @@ public class MaintenanceHistoryController {
 	@RequestMapping(path = "deleteMaintenance.do",method = RequestMethod.GET)
 	public String deleteMaintenance(Integer mhid,Model model) {	
 		dao.deleteMaintenanceHistory(dao.findById(mhid));
+		model.addAttribute("Deleted", "History has been deleted");
 		return "results";
 	}
 	

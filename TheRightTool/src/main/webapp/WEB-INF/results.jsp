@@ -8,8 +8,9 @@
 <title>Maintenance History</title>
 <jsp:include page ="bootstrapHead.jsp" />
 </head>
-<body>
+<body style="padding-bottom: 66px">
 <%@ include file="nav.jsp" %>
+<h1>${Deleted}</h1>
 	<c:choose>
 		<c:when test="${!empty historys}">
 			<table class="table table-striped table-hover">
@@ -42,7 +43,14 @@
 				<td>${history.hoursWorked}</td>
 				<td>${history.repairCost}</td>
 				<td>${history.dateCreated}</td>
+				<c:choose>
+				<c:when test="${!empty history.machineUrl}">
+				<td><img src="${history.machineUrl}"width="200" height="200"/></td>
+				</c:when>
+				<c:otherwise>
 				<td>${history.machineUrl}</td>
+				</c:otherwise>
+				</c:choose>
 				<td>
 				<form action="updateMaintenance.do" method="get">
 								<input type="hidden" value=${history.id } name="mhid" /> <input
@@ -113,11 +121,6 @@
 		<c:otherwise>
 		</c:otherwise>
 	</c:choose>
-<br>
-<br>
-<br>
-
-
 
 	<jsp:include page ="bootstrapFoot.jsp" />
 </body>

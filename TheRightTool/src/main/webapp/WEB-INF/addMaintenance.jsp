@@ -7,7 +7,7 @@
 <jsp:include page ="bootstrapHead.jsp" />
 
 </head>
-<body>
+<body style="padding-bottom: 66px">
 <%@ include file="nav.jsp" %>
 	<table>
 	
@@ -22,10 +22,10 @@
 						<input type="text" name="employeeName" required> <br> 						
 						
 					<label for="description">Failure Description:</label> <br> 
-						<input type="text" name="description" > <br> 
+						<textarea class="form-control" id="exampleFormControlTextarea1" rows="4" name="description" ></textarea>
 						
 					<label for="repair">Repair Description:</label> <br> 
-						<input type="text" name="repair" > <br>
+						<textarea class="form-control" id="exampleFormControlTextarea1" rows="4" name="repair" ></textarea>
 						
 					<label for="component">Component Replaced:</label> <br> 
 						<input type="text" name="component" > <br> 
