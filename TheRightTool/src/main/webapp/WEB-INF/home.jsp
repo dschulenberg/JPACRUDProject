@@ -47,8 +47,6 @@ Timely, routine repairs circumvent fewer large-scale repairs
 Improved safety and quality conditions for everyone</p>
 
 </main>
-<br>
-<br>
-<br>
+
 </body>
 </html>

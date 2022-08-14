@@ -101,8 +101,15 @@
 				<td>${history.hoursWorked}</td>
 				<td>${history.repairCost}</td>
 				<td>${history.dateCreated}</td>
+				<c:choose>
+				<c:when test="${!empty history.machineUrl}">
+				<td><img src="${history.machineUrl}"width="200" height="200"/></td>
+				</c:when>
+				<c:otherwise>
 				<td>${history.machineUrl}</td>
-								<td>
+				</c:otherwise>
+				</c:choose>
+				<td>
 				<form action="updateMaintenance.do" method="get">
 								<input type="hidden" value=${history.id } name="mhid" /> <input
 									 type="submit" value="Update" />
