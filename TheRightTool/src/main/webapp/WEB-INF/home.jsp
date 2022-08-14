@@ -45,6 +45,12 @@ Better conservation of assets and increased life expectancy of assets, thereby e
 Reduced overtime costs and more economical use of maintenance workers due to working on a scheduled basis instead of an emergency basis to repair breakdowns
 Timely, routine repairs circumvent fewer large-scale repairs
 Improved safety and quality conditions for everyone</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </main>
 </body>
 </html>

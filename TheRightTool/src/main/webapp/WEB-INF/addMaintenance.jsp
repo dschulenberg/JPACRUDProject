@@ -10,6 +10,7 @@
 <body>
 <%@ include file="nav.jsp" %>
 	<table>
+	
 		<tr>
 			<td align=left>
 				<h2 >Add A Maintenance Project:</h2>

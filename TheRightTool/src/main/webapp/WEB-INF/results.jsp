@@ -24,7 +24,6 @@
 						<th>Hours Worked</th>
 						<th>Repair Cost</th>
 						<th>Date Created</th>
-						<th>Date Updated</th>
 						<th>Machine Picture</th>
 						<th>Update</th>
 						<th>Delete</th>
@@ -43,7 +42,6 @@
 				<td>${history.hoursWorked}</td>
 				<td>${history.repairCost}</td>
 				<td>${history.dateCreated}</td>
-				<td>${history.lastUpdated}</td>
 				<td>${history.machineUrl}</td>
 				<td>
 				<form action="updateMaintenance.do" method="get">
@@ -79,7 +77,6 @@
 						<th>Hours Worked</th>
 						<th>Repair Cost</th>
 						<th>Date Created</th>
-						<th>Date Updated</th>
 						<th>Machine Picture</th>
 						<th>Update</th>
 						<th>Delete</th>
@@ -96,7 +93,6 @@
 				<td>${history.hoursWorked}</td>
 				<td>${history.repairCost}</td>
 				<td>${history.dateCreated}</td>
-				<td>${history.lastUpdated}</td>
 				<td>${history.machineUrl}</td>
 								<td>
 				<form action="updateMaintenance.do" method="get">
@@ -117,6 +113,12 @@
 		<c:otherwise>
 		</c:otherwise>
 	</c:choose>
+<br>
+<br>
+<br>
+
+
+
 	<jsp:include page ="bootstrapFoot.jsp" />
 </body>
 </html>

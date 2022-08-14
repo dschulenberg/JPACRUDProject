@@ -54,6 +54,7 @@
 
 <!-- Bottom of Page NavBar -->
 <nav class="navbar fixed-bottom navbar-light bg-light">
+
   <div class="container-fluid">
   
     <a class="navbar-brand" href="https://www.linkedin.com/in/daniel-schulenberg-2a0837b6/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40" height="40"/>LinkedIn</a>
