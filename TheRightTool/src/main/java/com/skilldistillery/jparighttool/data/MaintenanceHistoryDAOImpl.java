@@ -31,31 +31,13 @@ public class MaintenanceHistoryDAOImpl implements MaintenanceHistoryDAO {
 		return em.createQuery(query, MaintenanceHistory.class).getResultList();
 	}
 	public MaintenanceHistory addMaintenanceHistory(MaintenanceHistory history){
-		em = emf.createEntityManager();
-		em.getTransaction().begin();
 		em.persist(history);
 		em.flush();
-		em.getTransaction().commit();
 		return history;
 	}
-//	public void updateMaintenanceHistory() {
-//		EntityManager em = emf.createEntityManager();
-//		List<Customer> customers = null;
-//		//select * from customer where email IS NULL OR email ='';
-//		String query = "select c from Customer c  WHERE c.email IS NULL OR email =''";
-//		customers = em.createQuery(query, Customer.class).getResultList();
-//		for(Customer each: customers) {
-//			em.getTransaction().begin();
-//			each.setEmail(each.getFirstName()+"."+each.getLastName()+"sdcustomer.org");
-//			em.getTransaction().commit();
-//		}
-//
-//		em.close();
-//		}
+
 	public MaintenanceHistory updateMaintenanceHistory(MaintenanceHistory history) {
-		em = emf.createEntityManager();
 		MaintenanceHistory org =findById(history.getId());
-		em.getTransaction().begin();
 		org.setMachineName(history.getMachineName());
 		org.setEmployeeName(history.getEmployeeName());
 		org.setDescription(history.getDescription());
@@ -64,7 +46,21 @@ public class MaintenanceHistoryDAOImpl implements MaintenanceHistoryDAO {
 		org.setHoursWorked(history.getHoursWorked());
 		org.setRepairCost(history.getRepairCost());
 		org.setMachineUrl(history.getMachineUrl());
-		em.getTransaction().commit();
 		return history;
+	}
+	public boolean deleteMaintenanceHistory(MaintenanceHistory history) {
+		boolean removed = false;
+		em.remove(history);
+		removed = ! em.contains(history);
+		return removed;
+	}
+	public List<MaintenanceHistory> searchAll(String keyword){
+		keyword = "%" + keyword + "%";
+
+		String sql = "SELECT mh FROM MaintenanceHistory mh WHERE mh.machineName LIKE :keyword OR mh.employeeName LIKE :keyword OR mh.description LIKE :keyword OR mh.repair LIKE :keyword OR mh.component LIKE :keyword";
+
+
+		String query = "SELECT mh FROM MaintenanceHistory mh";
+		return em.createQuery(sql, MaintenanceHistory.class).setParameter("keyword", keyword).getResultList();
 	}
 }

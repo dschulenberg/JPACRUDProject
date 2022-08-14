@@ -9,4 +9,6 @@ public interface MaintenanceHistoryDAO {
 	List<MaintenanceHistory> findAll();
 	MaintenanceHistory addMaintenanceHistory(MaintenanceHistory history);
 	MaintenanceHistory updateMaintenanceHistory(MaintenanceHistory history); 
+	boolean deleteMaintenanceHistory(MaintenanceHistory history);
+	List<MaintenanceHistory> searchAll(String keyword);
 }

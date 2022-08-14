@@ -22,14 +22,14 @@
           <a class="nav-link" href="addMaintenance.do">Add Maintenance</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="getAllHistory.do">Get All</a>
+          <a class="nav-link" href="getAllHistory.do">Get All Histories</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="search.do">Search</a>
+          <a class="nav-link" href="search.do">Search By ID</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            External Links
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="https://github.com/SkillDistillery/SD34/blob/main/sql1/images/ERDiagram.png"target="_blank">ER Diagram</a></li>
@@ -43,6 +43,10 @@
         </li>
 
       </ul>
+            <form class="d-flex" action="searchAll.do" method="get">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" type="text" name="keyword">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
   </div>
 <jsp:include page ="bootstrapFoot.jsp" />
@@ -54,7 +58,7 @@
   
     <a class="navbar-brand" href="https://www.linkedin.com/in/daniel-schulenberg-2a0837b6/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40" height="40"/>LinkedIn</a>
     <a class="navbar-brand" href="https://github.com/dschulenberg" target="_blank"> <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"width="40" height="40"/>GitHub</a>
-    <a class="navbar-brand" href="contact.do"><img src="https://cdn1.vectorstock.com/i/thumb-large/94/65/contact-us-icon-simple-element-vector-27119465.jpg" width="40" height="40"/>Contact Info</a>
+    <a class="navbar-brand" href="#"><img src="https://cdn1.vectorstock.com/i/thumb-large/94/65/contact-us-icon-simple-element-vector-27119465.jpg" width="40" height="40"/>Contact Info</a>
     <a class="navbar-brand" href="#"><img src="https://media.istockphoto.com/id/1195568987/vector/write-a-resume-icon-vector-isolated-contour-symbol-illustration.webp?s=612x612&w=is&k=20&c=954fz_sWcoGgfFrt4TABbTzwU0PAbz9p-6wypoNekwA="width="40" height="40"/>Resume</a>
   </div>
 </nav>

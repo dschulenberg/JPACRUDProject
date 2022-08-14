@@ -64,12 +64,18 @@ public class MaintenanceHistoryController {
 		  model.addAttribute("history", dao.findById(mhid));
 		  return "updateMaintenance"; 
 	  }
-	@RequestMapping(path = "updateMaintenance.do")
-	public String updateMaintenance() {		
-		return "updateMaintenance";
+	@RequestMapping(path = "deleteMaintenance.do",method = RequestMethod.GET)
+	public String deleteMaintenance(Integer mhid,Model model) {	
+		dao.deleteMaintenanceHistory(dao.findById(mhid));
+		return "results";
 	}
 	
-	
+	@RequestMapping(path = "searchAll.do", method = RequestMethod.GET)
+	public String searchAll(String keyword,Model model) {
+		model.addAttribute("historys", dao.searchAll(keyword));
+		
+		return "results";
+	}
 	
 	
 	
