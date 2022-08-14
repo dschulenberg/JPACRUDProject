@@ -26,7 +26,7 @@
 						<th>Date Created</th>
 						<th>Date Updated</th>
 						<th>Machine Picture</th>
-						<th>Edit</th>
+						<th>Update</th>
 						<th>Delete</th>
 					</tr>
 				</thead>
@@ -45,13 +45,13 @@
 				<td>${history.dateCreated}</td>
 				<td>${history.lastUpdated}</td>
 				<td>${history.machineUrl}</td>
-				<td><a href="addMaintenance.do">Delete</a></td>
 				<td>
 				<form action="updateMaintenance.do" method="get">
 								<input type="hidden" value=${history.id } name="mhid" /> <input
 									 type="submit" value="Update" />
 							</form>
 							</td>
+				<td><a href="addMaintenance.do">Delete</a></td>
 				</tr>
 				</c:forEach>
 				</tbody>

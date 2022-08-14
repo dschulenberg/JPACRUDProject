@@ -54,15 +54,16 @@ public class MaintenanceHistoryDAOImpl implements MaintenanceHistoryDAO {
 //		}
 	public MaintenanceHistory updateMaintenanceHistory(MaintenanceHistory history) {
 		em = emf.createEntityManager();
+		MaintenanceHistory org =findById(history.getId());
 		em.getTransaction().begin();
-		history.setMachineName(history.getMachineName());
-		history.setEmployeeName(history.getEmployeeName());
-		history.setDescription(history.getDescription());
-		history.setRepair(history.getRepair());
-		history.setComponent(history.getComponent());
-		history.setHoursWorked(history.getHoursWorked());
-		history.setRepairCost(history.getRepairCost());
-		history.setMachineUrl(history.getMachineUrl());
+		org.setMachineName(history.getMachineName());
+		org.setEmployeeName(history.getEmployeeName());
+		org.setDescription(history.getDescription());
+		org.setRepair(history.getRepair());
+		org.setComponent(history.getComponent());
+		org.setHoursWorked(history.getHoursWorked());
+		org.setRepairCost(history.getRepairCost());
+		org.setMachineUrl(history.getMachineUrl());
 		em.getTransaction().commit();
 		return history;
 	}

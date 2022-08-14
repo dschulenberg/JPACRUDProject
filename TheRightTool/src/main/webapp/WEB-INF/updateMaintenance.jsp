@@ -20,6 +20,9 @@
 	 <div >
 	  
 	    <form class="forms" action="updateMaintenance.do" method="POST">
+	   					<label for="machineName">Id:</label><br>
+						<input type="text" name="id" value="${history.id}" readonly/> <br> 
+						
 	   					<label for="machineName">Machine Name:</label><br>
 						<input type="text" name="machineName" value="${history.machineName}" /> <br> 
 						
@@ -43,7 +46,8 @@
 												
 					<label for="machineUrl">Attach Photo:</label> <br> 
 						<input type="text" name="machineUrl"value="${history.machineUrl}"  ><br> 
-
+  			 <input type="submit" value="Update History">
+	    </form>
 	 </div>
 	    <br>
 	    <br>
