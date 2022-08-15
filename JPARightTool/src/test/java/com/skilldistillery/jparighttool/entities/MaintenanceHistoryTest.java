@@ -3,8 +3,6 @@ package com.skilldistillery.jparighttool.entities;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -15,7 +13,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class MaintenanceHistoryTest {
+
+class MaintenanceHistorysTest {
 	private static EntityManagerFactory emf;
 	private EntityManager em;
 	private MaintenanceHistory mh;
@@ -40,7 +39,12 @@ class MaintenanceHistoryTest {
 		em.close();
 		mh = null;
 	}
-
+	@Test
+	void test_maintenancehistory_find_by_id(){
+		mh = em.find(MaintenanceHistory.class, 1);
+		assertNotNull(mh);
+		assertEquals("UN-NEF-0000-490-2U66",mh.getMachineName());
+	}
 
 
 }
